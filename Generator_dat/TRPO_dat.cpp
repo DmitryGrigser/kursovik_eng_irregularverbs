@@ -6,7 +6,7 @@
 
 using namespace std;
 
-struct verb {char Infinitive[50]; char PastIndefinite[50]; char ParticipleII[50]; char Translation[50];}v1;
+struct verb {char Infinitive[50]; char PastIndefinite[50]; char dop[50]; char ParticipleII[50]; char Translation[50];}v1;
 
 void input(FILE *);
 void print(FILE *);
@@ -46,10 +46,13 @@ void input(FILE *text){
 		cin.getline(v1.Infinitive,50);
 		cout << "PastIndefinite: " << endl;
 		cin.getline(v1.PastIndefinite,50);
+		cout << "dop: " << endl;
+		cin.getline(v1.dop,50);
 		cout << "ParticipleII: " << endl;
 		cin.getline(v1.ParticipleII,50);
 		cout << "Translation: " << endl;
 		cin.getline(v1.Translation,50);
+		
 		fwrite(&v1,sizeof(v1),1,text);
 		cout << "complete? y/n" << endl;
 		ch = getch();
@@ -62,7 +65,7 @@ void print(FILE *text){
 	text = fopen("new.dat", "rb");
 	fread(&v1,sizeof(v1),1,text);
 	while(!feof(text)){
-		cout << " ¹ " << i << "\nInfinitive: " << v1.Infinitive << "\nPastIndefinite: " << v1.PastIndefinite << "\nParticipleII: " << v1.ParticipleII << "\nTranslation: " << v1.Translation << endl;
+		cout << " ¹ " << i << "\nInfinitive: " << v1.Infinitive << "\nPastIndefinite: " << v1.PastIndefinite << "\ndop: " << v1.dop << "\nParticipleII: " << v1.ParticipleII << "\nTranslation: " << v1.Translation << endl;
 		fread(&v1,sizeof(v1),1,text);
 		i++;
 	}
@@ -78,6 +81,8 @@ void app(FILE *text){
 		cin.getline(v1.Infinitive,50);
 		cout << "PastIndefinite: " << endl;
 		cin.getline(v1.PastIndefinite,50);
+		cout << "dop: " << endl;
+		cin.getline(v1.dop,50);
 		cout << "ParticipleII: " << endl;
 		cin.getline(v1.ParticipleII,50);
 		cout << "Translation: " << endl;
@@ -105,6 +110,8 @@ void find(FILE *text){
 				cin.getline(v1.Infinitive,50);
 				cout << "PastIndefinite: " << endl;
 				cin.getline(v1.PastIndefinite,50);
+				cout << "dop: " << endl;
+				cin.getline(v1.dop,50);
 				cout << "ParticipleII: " << endl;
 				cin.getline(v1.ParticipleII,50);
 				cout << "Translation: " << endl;
@@ -125,6 +132,30 @@ void find(FILE *text){
 				cin.getline(v1.Infinitive,50);
 				cout << "PastIndefinite: " << endl;
 				cin.getline(v1.PastIndefinite,50);
+				cout << "dop: " << endl;
+				cin.getline(v1.dop,50);
+				cout << "ParticipleII: " << endl;
+				cin.getline(v1.ParticipleII,50);
+				cout << "Translation: " << endl;
+				cin.getline(v1.Translation,50);
+				long i = sizeof(v1);
+				fseek(text, -i, 1);
+				fwrite(&v1,sizeof(v1),1,text);
+				break;
+			}
+		}
+		if(strcmp(v1.ParticipleII,buff) == 0){
+			cout <<"verb: " << v1.dop << " transfer: " << v1.dop  << endl;
+			cout << "change? y/n" << endl;
+			ch = getch();
+			if(ch == 'y')
+			{
+				cout << "Infinitive: " << endl;
+				cin.getline(v1.Infinitive,50);
+				cout << "PastIndefinite: " << endl;
+				cin.getline(v1.PastIndefinite,50);
+				cout << "dop: " << endl;
+				cin.getline(v1.dop,50);
 				cout << "ParticipleII: " << endl;
 				cin.getline(v1.ParticipleII,50);
 				cout << "Translation: " << endl;
@@ -145,6 +176,8 @@ void find(FILE *text){
 				cin.getline(v1.Infinitive,50);
 				cout << "PastIndefinite: " << endl;
 				cin.getline(v1.PastIndefinite,50);
+				cout << "dop: " << endl;
+				cin.getline(v1.dop,50);
 				cout << "ParticipleII: " << endl;
 				cin.getline(v1.ParticipleII,50);
 				cout << "Translation: " << endl;

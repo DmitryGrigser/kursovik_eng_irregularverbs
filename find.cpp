@@ -7,6 +7,7 @@ using namespace std;
 struct verb {
 char Infinitive[50]; 
 char PastIndefinite[50]; 
+char dop[50];
 char ParticipleII[50]; 
 char Translation[50];
 }v1;
@@ -24,6 +25,11 @@ void find(FILE *text){
 			break;
 		}
 		if(strcmp(v1.PastIndefinite,buff) == 0){
+			cout <<"Verb: " << v1.Infinitive << " \nTranslation: " << v1.Translation  << endl;
+			system("pause");
+			break;
+		}
+		if(strcmp(v1.dop,buff) == 0){
 			cout <<"Verb: " << v1.Infinitive << " \nTranslation: " << v1.Translation  << endl;
 			system("pause");
 			break;
