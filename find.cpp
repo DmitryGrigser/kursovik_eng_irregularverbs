@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include <locale>
 #include "find.h"
 
 using namespace std;
@@ -12,11 +13,8 @@ char ParticipleII[50];
 char Translation[50];
 }v1;
 
-void find(FILE *text){
-	char buff[50];
+void find(FILE *text, char* buff){
 	text = fopen("new.dat", "rb");
-	cout << "Enter the verb: ";
-	cin.getline(buff,50);
 	fread(&v1,sizeof(v1),1,text);
 	while(!feof(text)){
 		if(strcmp(v1.Infinitive,buff) == 0){
