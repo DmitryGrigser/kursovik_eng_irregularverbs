@@ -1,1 +1,1 @@
-void find(FILE *, char*);
+void find(FILE *, char*);//прототип
