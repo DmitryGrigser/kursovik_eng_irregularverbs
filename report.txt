@@ -1,4 +1,4 @@
-﻿Федеральное государственное бюджетное образовательное учреждение высшего образования 
+Федеральное государственное бюджетное образовательное учреждение высшего образования
 «Сибирский государственный университет телекоммуникаций и информатики»
 
 
@@ -9,10 +9,11 @@
 
 
 
-КУРСОВОЙ ПРОЕКТ
-по дисциплине: технологии разработки программного обеспечения 
-на тему: «Irregular verbs»
 
+
+КУРСОВОЙ ПРОЕКТ
+по дисциплине: технологии разработки программного обеспечения
+на тему: «Irregular verbs»
 
 
 
@@ -29,25 +30,20 @@
 
 
 Новосибирск 2016
-
-
-
-
-
-
 Содержание
 
-1.	Введение………………………………………………………………………………...3
-2.	Техническое задание...……..………………………………………………………..…4
-3.1 Модули программы………………………………………………………….
-3.2 Тестирование …………………………………………………………………..
-3.3 Описание студентами их участка разработки курсового проекта………………
-3.3.1. Григорьев Д.С…………………………………………………………….
-3.3.2. Смородин М.А…………………………………………………………….
-3.3.3. Дуванова М.Н…………………………………………………………….
-4.	Заключение……………………………………………………………………………
 
 
+1.Введение…………………………………………………………………………….….....3
+2.Техническое задание...……..…….………………………………………….…….…..…4
+3. Руководство пользователя…...………………………………………………………….5
+4. Руководство разработчика………………………………………………………………6
+5. Модули программы………………………………………………………………………
+6. Описание студентами их участка разработки курсового проекта……………………
+6.1. Григорьев Д.С………………………………………………………………………….
+6.2. Смородин М.А…………………………………………………………………………
+6.3 Дуванова М.Н…………………………………………………………………………..
+7. Заключение………………………………………………………………………………
 
 
 
@@ -73,26 +69,16 @@ Git — это набор утилит командной строки, кото
 это относится к файлам с исходным кодом. С его помощью можно восстанавливать старые версии проекта, сравнивать, 
 анализировать, объединять изменения и делать многое другое. Все эти действия можно назвать термином «контроль версий». 
 Существует множество других систем контроля версий, похожих по своему функционалу на Git.
-GitHub — крупнейший веб-сервис для хостинга IT-проектов и их совместной разработки. Основан на системе контроля версий Git. 
-Хо́стинг (англ. hosting) — услуга по предоставлению ресурсов для размещения информации на сервере, постоянно находящемся в 
-сети (обычно Интернет). Создатели сайта называют GitHub «социальной сетью для разработчиков». Кроме размещения кода, 
-участники могут общаться, комментировать правки друг друга, а также следить за новостями знакомых. С помощью широких 
-возможностей Git программисты могут объединять свои репозитории — GitHub предлагает удобный интерфейс для этого и может 
-отображать вклад каждого участника в виде дерева. Для проектов есть личные страницы, небольшие Вики и система отслеживания 
-ошибок. Прямо на сайте можно просмотреть файлы проектов с подсветкой синтаксиса для большинства языков программирования. 
-На платных тарифных планах можно создавать приватные репозитории, доступные ограниченному кругу пользователей.
-
-
+GitHub — крупнейший веб-сервис для хостинга IT-проектов и их совместной разработки. Основан на системе контроля версий Git. Хо́стинг (англ. hosting) — услуга по предоставлению ресурсов для размещения информации на сервере, постоянно находящемся в сети (обычно Интернет). Создатели сайта называют GitHub «социальной сетью для разработчиков». Кроме размещения кода, участники могут общаться, комментировать правки друг друга, а также следить за новостями знакомых. С помощью широких возможностей Git программисты могут объединять свои репозитории — GitHub предлагает удобный интерфейс для этого и может отображать вклад каждого участника в виде дерева. Для проектов есть личные страницы, небольшие Вики и система отслеживания ошибок. Прямо на сайте можно просмотреть файлы проектов с подсветкой синтаксиса для большинства языков программирования. На платных тарифных планах можно создавать приватные репозитории, доступные ограниченному кругу пользователей.
 
 
 
 3
-
-
 2.	Техническое задание
 Разработать приложение для проверки знания неправильных глаголов английского языка. 
 
 Требования к приложению:
+
 - должно содержать базу данных (БД) неправильных глаголов английского языка, состоящую из четырех следующих полей: 
 Infinitive, Past Indefinite, Participle II, translation;
 - первые 3 поля являются тремя формами неправильных английских глаголов;
@@ -100,10 +86,13 @@ Infinitive, Past Indefinite, Participle II, translation;
 - приложение можно создавать в любой среде разработке и с помощью любых языков программирования;
 - предполагается, что пользователь сам знает о способе образования неправильных глаголов;
 - приложение должно быть протестировано, и передано в эксплуатацию только при отсутствии ошибок.
+
 Алгоритм работы приложения:
-При вводе слова программа ищет, есть ли такое слово в БД. Если есть, то выдает перевод слова и то, к какой форме 
-глагола относится. Если введенное пользователем слово не найдено в БД – то программа выводит сообщение: 
-«Искомого глагола нет». 
+
+При вводе слова программа ищет, есть ли такое слово в БД. Если есть, то выдает перевод слова и то, к какой форме глагола относится. Если введенное пользователем слово не найдено в БД – то программа выводит сообщение: «Искомого глагола нет». 
+
+
+
 
 
 
@@ -111,4 +100,417 @@ Infinitive, Past Indefinite, Participle II, translation;
 
 
 4
-3.1 Модули программы
+3. Руководство пользователя
+
+1. Откройте файл verb.exe двойным нажатием на него.
+2. Введите 4 - find verb => введите глагол  (на английском языке).
+Если введенное вами слово является неправильным глаголом, тогда отобразится информация, к какой форме глагола относится глагол и перевод. Строкой ниже выведутся всё три формы этого глагола.  
+Если введенное вами слово не относится к неправильному глаголу или относится к другой части речи – вы увидите сообщение об ошибке error. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5
+4. Руководство разработчика
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6
+5. Модули программы
+main.cpp
+#include <iostream>
+#include <cstring>
+#include <locale>
+#include "find.h"
+
+using namespace std;
+
+main(){
+	FILE *text;
+	char buff[50], index;
+	while(1){
+		system("cls");
+		cout << "***Irregular Verbs***" << endl;
+		cout << "Enter the verb: ";
+		cin.getline(buff,50);
+		for(int i(0); i < 50; i++){
+			index = buff[i];
+			buff[i] = (char)tolower(index);
+		}
+		find(text,buff);
+	}
+}
+
+
+
+
+
+7
+TRPO_dat.cpp
+#include <iostream>
+#include <cstdlib>
+#include <cstring>
+#include <cstdio>
+#include <conio.h>
+
+using namespace std;
+
+struct verb {char Infinitive[50]; char PastIndefinite[50]; char dop[50]; char ParticipleII[50]; char Translation[50];}v1;
+
+void input(FILE *);
+void print(FILE *);
+void app(FILE *);
+void find(FILE *);
+
+int main(){
+	FILE *text;
+	int ch;
+	while(1){
+		system("cls");
+		puts(" 1 - new file");
+		puts(" 2 - file preview");
+		puts(" 3 - add to file");
+		puts(" 4 - change");
+		puts(" 0 - exit");
+		ch = getch();
+switch(ch)
+		{
+			case '1': input(text);break;
+			case '2': print(text);break;
+			case '3': app(text);break;
+			case '4': find(text);break;
+8
+                          case '0': return 0;
+			default: puts("error");
+		}
+	}
+}
+void input(FILE *text){
+	char ch,buff[50];
+	system("cls");
+	text = fopen("new.dat", "wb");
+	cout << "verb" << endl;
+	do{
+		cout << "Infinitive: " << endl;
+		cin.getline(v1.Infinitive,50);
+		cout << "PastIndefinite: " << endl;
+		cin.getline(v1.PastIndefinite,50);
+		cout << "dop: " << endl;
+		cin.getline(v1.dop,50);
+		cout << "ParticipleII: " << endl;
+		cin.getline(v1.ParticipleII,50);
+		cout << "Translation: " << endl;
+		cin.getline(v1.Translation,50);
+		
+		fwrite(&v1,sizeof(v1),1,text);
+		cout << "complete? y/n" << endl;
+		ch = getch();
+	}while(ch != 'y');
+	fclose(text);
+}
+void print(FILE *text){
+	int i(1);
+	system("cls");
+	text = fopen("new.dat", "rb");
+	fread(&v1,sizeof(v1),1,text);
+9
+while(!feof(text)){
+		cout << " № " << i << "\nInfinitive: " << v1.Infinitive << "\nPastIndefinite: " << v1.PastIndefinite << "\ndop: " << v1.dop << "\nParticipleII: " << v1.ParticipleII << "\nTranslation: " << v1.Translation << endl;
+		fread(&v1,sizeof(v1),1,text);
+		i++;
+	}
+	getch();
+}
+void app(FILE *text){
+	char ch,buff[50];
+	system("cls");
+	text = fopen("new.dat", "ab");
+	cout << "verb" << endl;
+	do{
+		cout << "Infinitive: " << endl;
+		cin.getline(v1.Infinitive,50);
+		cout << "PastIndefinite: " << endl;
+		cin.getline(v1.PastIndefinite,50);
+		cout << "dop: " << endl;
+		cin.getline(v1.dop,50);
+		cout << "ParticipleII: " << endl;
+		cin.getline(v1.ParticipleII,50);
+		cout << "Translation: " << endl;
+		cin.getline(v1.Translation,50);
+		fwrite(&v1,sizeof(v1),1,text);
+		cout << "complete? y/n" << endl;
+		ch = getch();
+}while(ch != 'y');
+fclose(text);
+}
+void find(FILE *text){
+	char ch, buff[50];
+	text = fopen("new.dat", "rb+");
+	cout << "enter the verb: ";
+10
+	cin.getline(buff,50);
+	fread(&v1,sizeof(v1),1,text);
+	while(!feof(text)){
+		if(strcmp(v1.Infinitive,buff) == 0){
+			cout <<"verb: " << v1.Infinitive << " transfer: " << v1.Translation  << endl;
+			cout << "change? y/n" << endl;
+			ch = getch();
+			if(ch == 'y')
+			{
+				cout << "Infinitive: " << endl;
+				cin.getline(v1.Infinitive,50);
+				cout << "PastIndefinite: " << endl;
+				cin.getline(v1.PastIndefinite,50);
+				cout << "dop: " << endl;
+				cin.getline(v1.dop,50);
+				cout << "ParticipleII: " << endl;
+				cin.getline(v1.ParticipleII,50);
+				cout << "Translation: " << endl;
+				cin.getline(v1.Translation,50);
+				long i = sizeof(v1);
+				fseek(text, -i, 1);
+				fwrite(&v1,sizeof(v1),1,text);
+				break;
+			}
+		}
+		if(strcmp(v1.PastIndefinite,buff) == 0){
+cout <<"verb: " << v1.Infinitive << " transfer: " << v1.Translation  << endl;
+			cout << "change? y/n" << endl;
+			ch = getch();
+			if(ch == 'y')
+			{
+				cout << "Infinitive: " << endl;
+				cin.getline(v1.Infinitive,50);
+11
+                                     cout << "PastIndefinite: " << endl;
+				cin.getline(v1.PastIndefinite,50);
+				cout << "dop: " << endl;
+				cin.getline(v1.dop,50);
+				cout << "ParticipleII: " << endl;
+				cin.getline(v1.ParticipleII,50);
+				cout << "Translation: " << endl;
+				cin.getline(v1.Translation,50);
+				long i = sizeof(v1);
+				fseek(text, -i, 1);
+				fwrite(&v1,sizeof(v1),1,text);
+				break;
+			}
+		}
+		if(strcmp(v1.ParticipleII,buff) == 0){
+			cout <<"verb: " << v1.dop << " transfer: " << v1.dop  << endl;
+			cout << "change? y/n" << endl;
+			ch = getch();
+			if(ch == 'y')
+			{
+				cout << "Infinitive: " << endl;
+				cin.getline(v1.Infinitive,50);
+				cout << "PastIndefinite: " << endl;
+				cin.getline(v1.PastIndefinite,50);
+				cout << "dop: " << endl;
+				cin.getline(v1.dop,50);
+                                     cout << "ParticipleII: " << endl;
+				cin.getline(v1.ParticipleII,50);
+				cout << "Translation: " << endl;
+				cin.getline(v1.Translation,50);
+				long i = sizeof(v1);
+				fseek(text, -i, 1);
+                                     fwrite(&v1,sizeof(v1),1,text);
+12
+                                     break;
+			}
+		}
+		if(strcmp(v1.ParticipleII,buff) == 0){
+			cout <<"verb: " << v1.Infinitive << " transfer: " << v1.Translation  << endl;
+			cout << "change? y/n" << endl;
+			ch = getch();
+			if(ch == 'y')
+			{
+				cout << "Infinitive: " << endl;
+				cin.getline(v1.Infinitive,50);
+				cout << "PastIndefinite: " << endl;
+				cin.getline(v1.PastIndefinite,50);
+				cout << "dop: " << endl;
+				cin.getline(v1.dop,50);
+				cout << "ParticipleII: " << endl;
+				cin.getline(v1.ParticipleII,50);
+				cout << "Translation: " << endl;
+				cin.getline(v1.Translation,50);
+				long i = sizeof(v1);
+				fseek(text, -i, 1);
+				fwrite(&v1,sizeof(v1),1,text);
+				break;
+			}
+		}
+		fread(&v1,sizeof(v1),1,text);
+}
+	cout << "error" << endl;
+	system("pause");
+	fclose(text);
+
+
+13
+find.cpp
+#include <iostream>
+#include <cstring>
+#include <locale>
+#include "find.h"
+
+using namespace std;
+
+struct verb {
+char Infinitive[50]; 
+char PastIndefinite[50]; 
+char dop[50];
+char ParticipleII[50]; 
+char Translation[50];
+}v1;
+
+void find(FILE *text, char* buff){
+	text = fopen("new.dat", "rb");
+	fread(&v1,sizeof(v1),1,text);
+	while(!feof(text)){
+		if(strcmp(v1.Infinitive,buff) == 0){
+			cout <<"Verb: " << v1.Infinitive << " \nTranslation: " << v1.Translation  << endl;
+			system("pause");
+			break;
+		}
+		if(strcmp(v1.PastIndefinite,buff) == 0){
+			cout <<"Verb: " << v1.Infinitive << " \nTranslation: " << v1.Translation  << endl;
+			system("pause");
+			break;
+		}
+		if(strcmp(v1.dop,buff) == 0){
+			cout <<"Verb: " << v1.Infinitive << " \nTranslation: " << v1.Translation  << endl;
+			system("pause");
+14
+                                break;
+		}
+		if(strcmp(v1.ParticipleII,buff) == 0){
+			cout <<"Verb: " << v1.Infinitive << " \nTranslation: " << v1.Translation  << endl;
+			system("pause");
+			break;
+		}
+		fread(&v1,sizeof(v1),1,text);
+	}
+	if(feof(text)){
+	cout << "The verb is not found" << endl;
+	system("pause");
+	}
+	fclose(text);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15
+6. Описание студентами их участка разработки курсового проекта
+6.1. Григорьев Д.С.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+16	
+6.2. Смородин М.А.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+17
+Дуванова М.Н.
+Придумала идею курсового проекта, то есть какие функции должна выполнять программа. Создала данную документацию к курсовому проекту. Добавила комментарии в текст программы.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+18
+7. Заключение
+В ходе выполнения данного курсового проекта было выявлено, что  удобно использовать в разработке программного обеспечения Git и GitHub. Так как, при создании программы, её код приходится очень часто изменять. И возникает необходимость сохранять разные версии кода. Но сохранять каждую версию в отдельную папку на компьютере – не очень удобно, так как папок может в итоге получиться очень много. И они занимают много дискового пространства на компьютере. Кроме того, чтобы поделиться какой-либо папкой, то есть версией сохранения, нужно потратить время на поиск и копирование. А версия кода может не устроить другого разработчика. В то время, как другой разработчик может сам визуально, без чьей-либо помощь просматривать изменения в ходе разработки программы на GitHub.    
+Так же важно разрабатывать программный продукт не в одиночку, а группой людей. При хорошо организованном подходе в групповой разработке ускоряется процесс создания программного обеспечения. Но при этом не нужно надеяться на то, что все сделает другой человек, а надо сразу пытаться принимать активное участие в создании программного обеспечения. Так как другие разработчики могут перестать взаимодействовать с не активным программистом. Ведь откладывание задач на потом, недостаточные теоретические знания и недостаток практики в программировании может заступорить весь проект, или создать негативное отношение к не активному разработчику. 
+В ходе выполнения нашего курсового проекта все поставленные задачи были реализованы. Это видно, если сопоставить ТЗ и руководство пользователя.
+
