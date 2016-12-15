@@ -8,13 +8,13 @@ using namespace std;
 
 struct verb {char Infinitive[50]; char PastIndefinite[50]; char dop[50]; char ParticipleII[50]; char Translation[50];}v1;
 
-void input(FILE *);
-void print(FILE *);
-void app(FILE *);
-void find(FILE *);
+void input(FILE *); //ввод слова для поиска
+void print(FILE *); //вывод на экран слова, если оно совпало с наличием в БД 
+void app(FILE *);  
+void find(FILE *); //реализация поиска слова
 
 
-int main(){
+int main(){       // функция выбора пункта меню
 	FILE *text;
 	int ch;
 	while(1){
@@ -65,7 +65,7 @@ void print(FILE *text){
 	text = fopen("new.dat", "rb");
 	fread(&v1,sizeof(v1),1,text);
 	while(!feof(text)){
-		cout << " � " << i << "\nInfinitive: " << v1.Infinitive << "\nPastIndefinite: " << v1.PastIndefinite << "\ndop: " << v1.dop << "\nParticipleII: " << v1.ParticipleII << "\nTranslation: " << v1.Translation << endl;
+		cout << " ¹ " << i << "\nInfinitive: " << v1.Infinitive << "\nPastIndefinite: " << v1.PastIndefinite << "\ndop: " << v1.dop << "\nParticipleII: " << v1.ParticipleII << "\nTranslation: " << v1.Translation << endl;
 		fread(&v1,sizeof(v1),1,text);
 		i++;
 	}
