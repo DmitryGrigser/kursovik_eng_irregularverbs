@@ -1,11 +1,11 @@
 #include <iostream>
 #include <cstring>
 #include <locale>
-#include "find.h"//файл хранящий прототипы
+#include "find.h"//С„Р°Р№Р» С…СЂР°РЅСЏС‰РёР№ РїСЂРѕС‚РѕС‚РёРїС‹
 
 using namespace std;
 
-struct verb {// состав структуры
+struct verb {// СЃРѕСЃС‚Р°РІ СЃС‚СЂСѓРєС‚СѓСЂС‹
 char Infinitive[50]; 
 char PastIndefinite[50]; 
 char dop[50];
@@ -14,35 +14,35 @@ char Translation[50];
 }v1;
 
 void find(FILE *text, char* buff){
-	text = fopen("new.dat", "rb");//открытие файла(БД)
-	fread(&v1,sizeof(v1),1,text);//чтение строки
-	while(!feof(text)){ //пока файл не кончился
-		if(strcmp(v1.Infinitive,buff) == 0){ //поиск полного совподения
+	text = fopen("new.dat", "rb");//РѕС‚РєСЂС‹С‚РёРµ С„Р°Р№Р»Р°(Р‘Р”)
+	fread(&v1,sizeof(v1),1,text);//С‡С‚РµРЅРёРµ СЃС‚СЂРѕРєРё
+	while(!feof(text)){ //РїРѕРєР° С„Р°Р№Р» РЅРµ РєРѕРЅС‡РёР»СЃСЏ
+		if(strcmp(v1.Infinitive,buff) == 0){ //РїРѕРёСЃРє РїРѕР»РЅРѕРіРѕ СЃРѕРІРїРѕРґРµРЅРёСЏ
 			cout <<"Verb: " << v1.Infinitive << " \nTranslation: " << v1.Translation  << endl;
 			system("pause");
 			break;
 		}
-		if(strcmp(v1.PastIndefinite,buff) == 0){ //поиск полного совподения
+		if(strcmp(v1.PastIndefinite,buff) == 0){ //РїРѕРёСЃРє РїРѕР»РЅРѕРіРѕ СЃРѕРІРїРѕРґРµРЅРёСЏ
 			cout <<"Verb: " << v1.Infinitive << " \nTranslation: " << v1.Translation  << endl;
 			system("pause");
 			break;
 		}
-		if(strcmp(v1.dop,buff) == 0){ //поиск полного совподения
+		if(strcmp(v1.dop,buff) == 0){ //РїРѕРёСЃРє РїРѕР»РЅРѕРіРѕ СЃРѕРІРїРѕРґРµРЅРёСЏ
 			cout <<"Verb: " << v1.Infinitive << " \nTranslation: " << v1.Translation  << endl;
 			system("pause");
 			break;
 		}
-		if(strcmp(v1.ParticipleII,buff) == 0){ //поиск полного совподения
+		if(strcmp(v1.ParticipleII,buff) == 0){ //РїРѕРёСЃРє РїРѕР»РЅРѕРіРѕ СЃРѕРІРїРѕРґРµРЅРёСЏ
 			cout <<"Verb: " << v1.Infinitive << " \nTranslation: " << v1.Translation  << endl;
 			system("pause");
 			break;
 		}
-		fread(&v1,sizeof(v1),1,text);//чтение строки(след.)
+		fread(&v1,sizeof(v1),1,text);//С‡С‚РµРЅРёРµ СЃС‚СЂРѕРєРё(СЃР»РµРґ.)
 	}
-	if(feof(text)){ // если файл концился то...
+	if(feof(text)){ // РµСЃР»Рё С„Р°Р№Р» РєРѕРЅС†РёР»СЃСЏ С‚Рѕ...
 	cout << "The verb is not found" << endl;
 	system("pause");
 	}
-	fclose(text);//закрытие файла(БД)
+	fclose(text);//Р·Р°РєСЂС‹С‚РёРµ С„Р°Р№Р»Р°(Р‘Р”)
 }
 
