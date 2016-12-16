@@ -41,7 +41,7 @@ void find(char *buff){
 		fread(&v,sizeof(v),1,text);//чтение строки(след.)
 	}
 	if(feof(text)){ // если файл концился то...
-	cout << "The verb is not found" << endl;
+	cout << "Error, try again" << endl;
 	system("pause");
 	}
 	fclose(text);//закрытие файла(БД)
