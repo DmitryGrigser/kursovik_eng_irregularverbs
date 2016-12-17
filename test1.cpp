@@ -16,16 +16,16 @@ void find(char *);
 
 main(){
 	cout << "positive test(inf + translation)" << endl;
-	char buff1[] = "to be";//позитивный 
+	char buff1[] = "broken";//позитивный 
 	cout << buff1 << endl;
 	find(buff1);
 	char buff2[] = "was";//позитивный 
 	cout << buff2 << endl;
 	find(buff2);
-	char buff3[] = "were";//позитивный 
+	char buff3[] = "chose";//позитивный 
 	cout << buff3 << endl;
 	find(buff3);
-	char buff4[] = "been";//позитивный 
+	char buff4[] = "fallen";//позитивный 
 	cout << buff4 << endl;
 	find(buff4);
 	cout << "negative test(error)" << endl;
